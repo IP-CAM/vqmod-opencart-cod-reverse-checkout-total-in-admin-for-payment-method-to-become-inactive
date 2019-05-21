@@ -8,33 +8,33 @@
 	<version>0.1.0</version>
 	<vqmver>2.6.3</vqmver>
 	<author>kanenas.net (aka Nikolas Branis) - nbran@kanenas.net</author>
-	<file path="admin/language/el-gr/extension/payment/" name="cod.php" error="log">
+	<file path="admin/language/greek/payment/" name="cod.php" error="log">
 		<operation error="skip">
-			<search position="replace"><![CDATA[$_['help_total']         = 'Το συνολικό ποσό που πρέπει να φτάσει η παραγγελία για να ενεργοποιηθεί η μέθοδος πληρωμής.';]]></search>
+			<search position="replace"><![CDATA[$_['help_total']                     = 'Το συνολικό ποσό που πρέπει να φτάσει η παραγγελία για να ενεργοποιηθεί η μέθοδος πληρωμής.';]]></search>
 			<add><![CDATA[
-// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v23x.xml (start) <<
-$_['help_total']         = 'Το συνολικό ποσό που πρέπει να φτάσει η παραγγελία για να απενεργοποιηθεί η μέθοδος πληρωμής.';
-// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v23x.xml (end) <<
+// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v21x.xml (start) <<
+$_['help_total']                     = 'Το συνολικό ποσό που πρέπει να φτάσει η παραγγελία για να απενεργοποιηθεί η μέθοδος πληρωμής.';
+// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v21x.xml (end) <<
 			]]></add>
 		</operation>
 	</file>
-	<file path="admin/language/en-gb/extension/payment/" name="cod.php" error="log">
+	<file path="admin/language/english/payment/" name="cod.php" error="log">
 		<operation error="skip">
-			<search position="replace"><![CDATA[$_['help_total']		 = 'The checkout total the order must reach before this payment method becomes active.';]]></search>
+			<search position="replace"><![CDATA[$_['help_total']					= 'The checkout total the order must reach before this payment method becomes active.';]]></search>
 			<add><![CDATA[
-// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v23x.xml (start) <<
-$_['help_total']		 = 'The checkout total the order must reach before this payment method becomes inactive.';
-// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v23x.xml (end) <<
+// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v21x.xml (start) <<
+$_['help_total']					= 'The checkout total the order must reach before this payment method becomes inactive.';
+// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v21x.xml (end) <<
 			]]></add>
 		</operation>
 	</file>
-	<file path="catalog/model/extension/payment/" name="cod.php" error="log">
+	<file path="catalog/model/payment/" name="cod.php" error="log">
 		<operation error="skip">
 			<search position="replace"><![CDATA[if ($this->config->get('cod_total') > 0 && $this->config->get('cod_total') > $total) {]]></search>
 			<add><![CDATA[
-		// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v23x.xml (start) <<
+		// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v21x.xml (start) <<
 		if ($this->config->get('cod_total') > 0 && $this->config->get('cod_total') < $total) {
-		// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v23x.xml (end) <<
+		// kanenas: knns_cod_reverse_checkout_total_in_admin_for_payment_method_to_become_inactive_v21x.xml (end) <<
 			]]></add>
 		</operation>
 	</file>
